@@ -17,7 +17,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-transparent glassmorphism">
+    <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Logo />

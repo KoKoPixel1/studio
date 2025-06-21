@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -10,14 +10,13 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/placeholders';
-import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 glassmorphism">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-transparent glassmorphism">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Logo />
@@ -32,11 +31,10 @@ export function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="pr-0">
+              <SheetContent side="left" className="pr-0 bg-background/80 glassmorphism">
                 <div className="flex flex-col h-full">
-                  <div className="p-4 border-b flex items-center justify-between">
+                  <div className="p-4 border-b border-white/10 flex items-center justify-between">
                     <Logo />
-                    <ThemeToggle />
                   </div>
                   <nav className="flex flex-col items-start space-y-2 p-4">
                     {navLinks.map((link) => (
@@ -83,7 +81,6 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-2">
-            <ThemeToggle />
             <Button asChild>
               <Link href="/join-us">Join Us</Link>
             </Button>

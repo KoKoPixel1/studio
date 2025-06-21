@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-24 sm:py-32 lg:py-40 text-center bg-secondary">
+      <section className="py-24 sm:py-32 lg:py-40 text-center bg-transparent">
         <div className="container">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary tracking-tighter fade-in-up">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary tracking-tighter fade-in-up bg-clip-text text-transparent bg-gradient-to-br from-white to-primary/70">
             Fostering Innovation, Inspiring Entrepreneurs
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-20 md:py-28 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">Upcoming Events</h2>
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-20 md:py-28 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">Our Valued Sponsors</h2>

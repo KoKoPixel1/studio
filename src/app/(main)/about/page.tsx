@@ -53,7 +53,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary">What We Do</h2>

@@ -775,10 +775,6 @@ h1,h2,h3,h4,h5,h6 {
   top: 50%;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .-z-20 {
   z-index: -20;
 }
@@ -1344,10 +1340,6 @@ h1,h2,h3,h4,h5,h6 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1552,10 +1544,6 @@ h1,h2,h3,h4,h5,h6 {
   border-color: var(--color-border);
 }
 
-.border-border\/30 {
-  border-color: hsl(var(--border) / 0.3);
-}
-
 .border-border\/50 {
   border-color: hsl(var(--border) / 0.5);
 }
@@ -1656,10 +1644,6 @@ h1,h2,h3,h4,h5,h6 {
   background-color: transparent;
 }
 
-.bg-\[radial-gradient\(circle_at_20\%_30\%\2c hsl\(var\(--primary\)\/0\.1\)\2c transparent_35\%\)\2c radial-gradient\(circle_at_80\%_70\%\2c hsl\(var\(--secondary\)\/0\.1\)\2c transparent_35\%\)\] {
-  background-image: radial-gradient(circle at 20% 30%,hsl(var(--primary)/0.1),transparent 35%),radial-gradient(circle at 80% 70%,hsl(var(--secondary)/0.1),transparent 35%);
-}
-
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1668,6 +1652,10 @@ h1,h2,h3,h4,h5,h6 {
   --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
   --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-accent {
+  --tw-gradient-to: hsl(var(--accent)) var(--tw-gradient-to-position);
 }
 
 .to-foreground\/90 {
@@ -2146,6 +2134,10 @@ h1,h2,h3,h4,h5,h6 {
   transition-duration: 150ms;
 }
 
+.delay-200 {
+  transition-delay: 200ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -2190,6 +2182,10 @@ h1,h2,h3,h4,h5,h6 {
   --tw-enter-translate-y: initial;
 }
 
+.fade-in {
+  --tw-enter-opacity: 0;
+}
+
 .fade-in-0 {
   --tw-enter-opacity: 0;
 }
@@ -2210,12 +2206,42 @@ h1,h2,h3,h4,h5,h6 {
   animation-duration: 500ms;
 }
 
+.delay-200 {
+  animation-delay: 200ms;
+}
+
 .ease-in-out {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ease-linear {
   animation-timing-function: linear;
+}
+
+.animated-gradient-bg {
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+      -45deg, 
+      hsl(var(--background)), 
+      hsl(var(--primary) / 0.1), 
+      hsl(var(--secondary) / 0.2), 
+      hsl(var(--background))
+    );
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .file\:border-0::file-selector-button {
@@ -2991,6 +3017,10 @@ h1,h2,h3,h4,h5,h6 {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:flex-row {

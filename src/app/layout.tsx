@@ -27,8 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Background Elements */}
-          <div className="fixed inset-0 -z-20 h-full w-full bg-background" />
-          <div className="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_20%_30%,hsl(var(--primary)/0.1),transparent_35%),radial-gradient(circle_at_80%_70%,hsl(var(--secondary)/0.1),transparent_35%)]" />
+          <div className="fixed inset-0 -z-20 h-full w-full animated-gradient-bg" />
           
           <LoadingScreen />
           {children}

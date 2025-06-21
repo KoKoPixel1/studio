@@ -28,7 +28,7 @@ export function EventCard({ title, date, description, imageUrl, isUpcoming = fal
         {isUpcoming && <Badge className="absolute top-4 right-4">Upcoming</Badge>}
       </CardHeader>
       <CardContent className="p-6 flex-grow">
-        <CardTitle className="mb-2 text-xl">{title}</CardTitle>
+        <CardTitle className="mb-2 text-xl text-gradient">{title}</CardTitle>
         <div className="flex items-center text-sm text-muted-foreground mb-4">
           <Calendar className="h-4 w-4 mr-2" />
           <span>{date}</span>

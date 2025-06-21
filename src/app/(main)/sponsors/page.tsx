@@ -14,8 +14,8 @@ export default function SponsorsPage() {
       <div className="container py-16 md:py-24 space-y-16">
         {tiers.map(tier => (
           <div key={tier}>
-            <h2 className="text-3xl font-bold text-center mb-10">
-              <span className="text-primary">{tier}</span> Sponsors
+            <h2 className="text-3xl font-bold text-center mb-10 text-gradient">
+              {tier} Sponsors
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
               {sponsors

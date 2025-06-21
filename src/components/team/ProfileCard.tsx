@@ -23,7 +23,7 @@ export function ProfileCard({ name, role, imageUrl, bio, dataAiHint }: ProfileCa
           className="rounded-full object-cover aspect-square mb-4"
           data-ai-hint={dataAiHint}
         />
-        <h3 className="text-xl font-bold text-primary">{name}</h3>
+        <h3 className="text-xl font-bold text-gradient">{name}</h3>
         <p className="text-accent-foreground font-semibold text-sm">{role}</p>
       </CardHeader>
       <CardContent>

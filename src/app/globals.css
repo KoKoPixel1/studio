@@ -66,13 +66,13 @@
     -webkit-backdrop-filter: blur(12px);
     @apply border shadow-lg;
   }
-  
-  .text-gradient-hover:hover {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
-  }
 }
 
 @layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent;
+  }
+  
   .animated-gradient-bg {
     background-image: linear-gradient(to bottom, hsl(210, 100%, 97%), white);
   }

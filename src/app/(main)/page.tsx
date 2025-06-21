@@ -14,7 +14,7 @@ export default function Home() {
       <section className="py-24 sm:py-32 lg:py-40 text-center bg-transparent animate-in fade-in duration-500">
         <div className="container">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-center">
-            <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent">
+            <span className="text-gradient">
               Fostering Innovation, Inspiring Entrepreneurs
             </span>
           </h1>
@@ -36,7 +36,7 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-primary text-gradient-hover transition-all">Nurturing the Next Generation of Innovators</h2>
+            <h2 className="text-3xl font-bold text-gradient transition-all">Nurturing the Next Generation of Innovators</h2>
             <p className="mt-4 text-muted-foreground">
               IIEC is a student-run organization committed to fostering an entrepreneurial mindset among students. We provide a platform for aspiring entrepreneurs to learn, network, and grow their ideas into successful ventures.
             </p>
@@ -84,7 +84,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary text-gradient-hover transition-all">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-gradient transition-all">Upcoming Events</h2>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
               Join our workshops, competitions, and talks.
             </p>
@@ -106,7 +106,7 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary text-gradient-hover transition-all">Meet Our Team</h2>
+            <h2 className="text-3xl font-bold text-gradient transition-all">Meet Our Team</h2>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
               The driving force behind IIEC's success.
             </p>
@@ -128,7 +128,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary text-gradient-hover transition-all">Our Valued Sponsors</h2>
+            <h2 className="text-3xl font-bold text-gradient transition-all">Our Valued Sponsors</h2>
             <p className="mt-2 text-muted-foreground">We are grateful for the support of our partners.</p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8">

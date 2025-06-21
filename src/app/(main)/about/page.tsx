@@ -26,7 +26,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-primary">Our Vision & Mission</h2>
+              <h2 className="text-3xl font-bold text-gradient">Our Vision & Mission</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   <strong className="text-foreground">Vision:</strong> To establish a thriving ecosystem of innovation and entrepreneurship within IISER Berhampur, empowering students to become the leaders and problem-solvers of tomorrow.
@@ -56,7 +56,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">What We Do</h2>
+            <h2 className="text-3xl font-bold text-gradient">What We Do</h2>
             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
               Our activities are designed to inspire, educate, and support aspiring entrepreneurs at every stage of their journey.
             </p>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary">Our Coordinators</h2>
+            <h2 className="text-3xl font-bold text-gradient">Our Coordinators</h2>
             <p className="mt-2 text-muted-foreground">The guiding force behind our initiatives.</p>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">

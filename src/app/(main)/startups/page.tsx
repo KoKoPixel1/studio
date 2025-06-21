@@ -26,7 +26,7 @@ export default function StartupsPage() {
                 />
               </CardHeader>
               <CardContent className="p-6 flex-grow">
-                <CardTitle className="text-2xl text-primary mb-2">{startup.name}</CardTitle>
+                <CardTitle className="text-2xl text-gradient mb-2">{startup.name}</CardTitle>
                 <CardDescription>{startup.description}</CardDescription>
               </CardContent>
               <CardFooter className="p-6 pt-0 bg-secondary/50">

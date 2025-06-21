@@ -12,7 +12,7 @@ export default function TeamPage() {
       />
       <div className="container py-16 md:py-24">
         <Tabs defaultValue="committee" className="w-full">
-          <div className="w-full overflow-x-auto no-scrollbar flex justify-center pb-2">
+          <div className="w-full overflow-x-auto no-scrollbar pb-2">
             <TabsList className="w-max sm:w-auto">
               <TabsTrigger value="committee">Working Committee</TabsTrigger>
               <TabsTrigger value="core">Core Members</TabsTrigger>

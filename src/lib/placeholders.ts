@@ -7,6 +7,7 @@ export const navLinks = [
   { href: '/startups', label: 'Startups' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/blog', label: 'Blog' },
+  { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -176,4 +177,31 @@ export const documents = [
     { name: 'IIEC Annual Report 2023', url: '#' },
     { name: 'Club Constitution', url: '#' },
     { name: 'Sponsorship Brochure 2024', url: '#' },
+];
+
+export const faqItems = [
+  {
+    question: "What is the Innovation and Incubation Entrepreneurship Cell (IIEC)?",
+    answer: "The IIEC is a student-run organization at IISER Berhampur dedicated to fostering a culture of innovation and entrepreneurship. We provide resources, mentorship, and a platform for students to turn their ideas into reality."
+  },
+  {
+    question: "Who is eligible to join IIEC?",
+    answer: "All students of IISER Berhampur, regardless of their year or department, are welcome to join our community. We believe that a diverse group of minds is key to innovation."
+  },
+  {
+    question: "Do I need to have a business idea to join?",
+    answer: "Not at all! Many of our members join to learn, explore their interests, and be part of a creative community. We host ideation workshops and team-building events to help you find your passion and potential co-founders."
+  },
+  {
+    question: "What kind of events and activities does IIEC organize?",
+    answer: "We organize a wide range of events including workshops on business skills, speaker sessions with successful entrepreneurs, business plan competitions, pitching events, and our annual flagship event, the E-Summit."
+  },
+  {
+    question: "How can I stay updated on IIEC's activities?",
+    answer: "The best way to stay updated is by following our social media channels (links in the footer) and checking the 'Events' page on this website. You can also sign up for our newsletter for regular updates."
+  },
+  {
+    question: "I represent a company. How can we sponsor or collaborate with IIEC?",
+    answer: "We are always open to collaborations and partnerships. Please visit our 'Sponsors' page for more information or reach out to us directly via the contact form on our 'Contact' page. We'd love to discuss potential opportunities."
+  }
 ];

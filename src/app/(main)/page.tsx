@@ -6,7 +6,6 @@ import { ArrowRight, Lightbulb, Target, Users, Handshake } from 'lucide-react';
 import { EventCard } from '@/components/events/EventCard';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { events, teamMembers, sponsors } from '@/lib/placeholders';
-import { TypingHeadline } from '@/components/common/TypingHeadline';
 
 export default function Home() {
   return (
@@ -14,11 +13,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="py-24 sm:py-32 lg:py-40 text-center bg-transparent">
         <div className="container">
-          <TypingHeadline />
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-center">
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary to-foreground/90">
+              Fostering Innovation, Inspiring Entrepreneurs
+            </span>
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
             The Innovation and Incubation Entrepreneurship Cell (IIEC) of IISER Berhampur is dedicated to building a vibrant startup ecosystem.
           </p>
-          <div className="mt-8 flex justify-center gap-4 fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
               <Link href="/events">Upcoming Events</Link>
             </Button>

@@ -62,19 +62,6 @@
 }
 
 @layer components {
-  .fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  @keyframes fade-in-up {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   .glassmorphism {
     background-color: hsl(var(--card) / 0.6);
     backdrop-filter: blur(12px);
@@ -84,13 +71,5 @@
   
   .text-gradient-hover:hover {
     @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
-  }
-
-  .animate-blink {
-    animation: blink 1s step-end infinite;
-  }
-  @keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
   }
 }

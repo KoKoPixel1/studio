@@ -26,9 +26,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Background Elements */}
-          <div className="fixed inset-0 -z-20 h-full w-full animated-gradient-bg" />
-          
           <LoadingScreen />
           {children}
           <Toaster />

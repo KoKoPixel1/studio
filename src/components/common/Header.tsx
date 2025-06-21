@@ -43,8 +43,8 @@ export function Header() {
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
-                          'text-lg font-medium transition-colors hover:text-primary',
-                          pathname === link.href ? 'text-primary' : 'text-muted-foreground'
+                          'text-lg font-medium transition-colors',
+                          pathname === link.href ? 'text-primary' : 'text-muted-foreground text-gradient-hover'
                         )}
                       >
                         {link.label}
@@ -71,8 +71,8 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'transition-colors hover:text-primary',
-                  pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                  'transition-colors',
+                  pathname === link.href ? 'text-foreground' : 'text-muted-foreground text-gradient-hover'
                 )}
               >
                 {link.label}

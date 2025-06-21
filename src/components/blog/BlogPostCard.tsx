@@ -29,7 +29,7 @@ export function BlogPostCard({ title, author, date, excerpt, imageUrl, dataAiHin
       </CardHeader>
       <CardContent className="p-6 flex-grow">
         <CardTitle className="mb-2 text-xl leading-snug">
-          <Link href="#" className="hover:text-primary transition-colors">
+          <Link href="#" className="text-gradient-hover">
             {title}
           </Link>
         </CardTitle>

@@ -647,6 +647,19 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.text-gradient-hover:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: hsl(var(--secondary) / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--secondary)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: hsl(var(--accent)) var(--tw-gradient-to-position);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1110,10 +1123,6 @@ body {
 
 .w-72 {
   width: 18rem;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .w-9 {

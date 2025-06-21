@@ -12,11 +12,13 @@ export default function TeamPage() {
       />
       <div className="container py-16 md:py-24">
         <Tabs defaultValue="committee" className="w-full">
-          <TabsList className="grid w-full max-w-lg mx-auto grid-cols-1 sm:grid-cols-3">
-            <TabsTrigger value="committee">Working Committee</TabsTrigger>
-            <TabsTrigger value="core">Core Members</TabsTrigger>
-            <TabsTrigger value="alumni">Alumni</TabsTrigger>
-          </TabsList>
+          <div className="w-full overflow-x-auto no-scrollbar flex justify-center pb-2">
+            <TabsList className="w-max sm:w-auto">
+              <TabsTrigger value="committee">Working Committee</TabsTrigger>
+              <TabsTrigger value="core">Core Members</TabsTrigger>
+              <TabsTrigger value="alumni">Alumni</TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value="committee" className="mt-12">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

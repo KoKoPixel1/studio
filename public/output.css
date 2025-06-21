@@ -1008,6 +1008,10 @@ body {
   height: 2.25rem;
 }
 
+.h-\[1\.2rem\] {
+  height: 1.2rem;
+}
+
 .h-\[1px\] {
   height: 1px;
 }
@@ -1030,10 +1034,6 @@ body {
 
 .h-svh {
   height: 100svh;
-}
-
-.h-\[1\.2rem\] {
-  height: 1.2rem;
 }
 
 .max-h-96 {
@@ -1132,6 +1132,10 @@ body {
   width: var(--sidebar-width);
 }
 
+.w-\[1\.2rem\] {
+  width: 1.2rem;
+}
+
 .w-\[1px\] {
   width: 1px;
 }
@@ -1147,10 +1151,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[1\.2rem\] {
-  width: 1.2rem;
 }
 
 .min-w-0 {

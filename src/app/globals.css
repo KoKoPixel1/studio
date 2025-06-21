@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --background: 212 67% 95%;
+    --background: 212 67% 95%; /* Light grayish-blue */
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
-    --primary: 224 55% 22%;
+    --primary: 224 55% 22%; /* Navy blue */
     --primary-foreground: 0 0% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 96.1%; /* Light blue */
     --secondary-foreground: 222 47% 11%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -63,7 +63,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body font-normal;
   }
 }
 
@@ -79,5 +79,14 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }

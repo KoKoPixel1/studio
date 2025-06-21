@@ -1,15 +1,12 @@
-import Link from 'next/link';
-
-export function Logo() {
-  return (
-    <Link href="/" className="flex items-center space-x-2">
-      <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1080.000000pt" height="1080.000000pt" viewBox="0 0 1080.000000 1080.000000"
- preserveAspectRatio="xMidYMid meet"
- className="h-8 w-8 text-primary">
+ preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
-fill="currentColor" stroke="none">
+fill="#000000" stroke="none">
 <path d="M6507 9392 l-287 -287 288 -288 287 -287 288 288 287 287 -288 288
 -287 287 -288 -288z"/>
 <path d="M5665 9609 c-759 -46 -1516 -328 -2125 -790 -534 -406 -957 -939
@@ -49,8 +46,4 @@ fill="currentColor" stroke="none">
 485 -3 485 -2 620 620 c341 341 623 620 627 620 5 0 8 -92 8 -205 l0 -205 375
 0 375 0 0 1090 0 1090 -1090 0 -1090 0 0 -375z"/>
 </g>
-      </svg>
-      <span className="text-xl font-bold text-primary">IIEC</span>
-    </Link>
-  );
-}
+</svg>

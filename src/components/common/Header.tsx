@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/lib/placeholders';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const pathname = usePathname();
@@ -33,8 +34,9 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="left" className="pr-0">
                 <div className="flex flex-col h-full">
-                  <div className="p-4 border-b">
+                  <div className="p-4 border-b flex items-center justify-between">
                     <Logo />
+                    <ThemeToggle />
                   </div>
                   <nav className="flex flex-col items-start space-y-2 p-4">
                     {navLinks.map((link) => (
@@ -81,6 +83,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
             <Button asChild>
               <Link href="/join-us">Join Us</Link>
             </Button>

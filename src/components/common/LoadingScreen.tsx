@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Spline from '@splinetool/react-spline';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 
@@ -8,7 +9,8 @@ export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
+    // Increased timeout to allow Spline scene to load
+    const timer = setTimeout(() => setLoading(false), 3000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,7 +22,11 @@ export function LoadingScreen() {
       )}
       aria-hidden={!loading}
     >
-      <div className="animate-fade-in-out">
+      <Spline
+        scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
+        className="!absolute inset-0 z-0"
+      />
+      <div className="relative z-10">
         <Logo />
       </div>
     </div>

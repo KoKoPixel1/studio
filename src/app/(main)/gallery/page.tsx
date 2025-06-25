@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { galleryImages } from '@/lib/placeholders';
 import { containerVariants, itemVariants } from '@/lib/animations';
+import { ImageUploader } from '@/components/gallery/ImageUploader';
 
 export default function GalleryPage() {
   return (
@@ -15,6 +16,7 @@ export default function GalleryPage() {
         subtitle="A glimpse into our vibrant community and memorable moments."
       />
       <div className="container py-16 md:py-24">
+        <ImageUploader />
         <motion.div 
           className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4"
           variants={containerVariants}

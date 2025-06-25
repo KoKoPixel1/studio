@@ -25,13 +25,13 @@ export function HiddenDino({ dinoId, dinoType, className }: HiddenDinoProps) {
     <button
       onClick={handleClick}
       className={cn(
-        "z-10 text-foreground/30 hover:text-primary hover:scale-110 transition-all duration-300 focus:outline-none focus:text-primary",
+        "z-10 text-primary opacity-30 hover:opacity-100 hover:scale-125 transition-all duration-300 focus:outline-none focus:opacity-100",
         className
       )}
       aria-label="Find the dinosaur"
       title="You found something..."
     >
-      <DinosaurIcon type={dinoType} className="w-8 h-8" />
+      <DinosaurIcon type={dinoType} className="w-6 h-6" />
     </button>
   );
 }

@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
-const DINO_IDS = ['home-dino', 'about-dino', 'contact-dino'];
+const DINO_IDS = ['home-dino', 'about-dino', 'contact-dino', 'gallery-dino', 'team-dino'];
 const TOTAL_DINOS = DINO_IDS.length;
 
 type DinoHuntState = {
@@ -47,7 +47,7 @@ export function DinoHuntProvider({ children }: { children: ReactNode }) {
     if (allFound && !achievementAwarded) {
       toast({
         title: '🦖 Achievement Unlocked! 🦖',
-        description: 'I can see from miles',
+        description: 'Now You See It',
       });
       setAchievementAwarded(true);
     }

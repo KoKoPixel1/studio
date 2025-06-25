@@ -2,6 +2,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { galleryImages } from '@/lib/placeholders';
+import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function GalleryPage() {
   return (
@@ -13,7 +14,8 @@ export default function GalleryPage() {
       <div className="container py-16 md:py-24">
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {galleryImages.map((image, index) => (
-            <Card key={index} className="overflow-hidden break-inside-avoid transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Card key={index} className="relative overflow-hidden break-inside-avoid transition-all duration-300 hover:shadow-lg hover:scale-105">
+               {index === 0 && <HiddenDino dinoId="gallery-dino" dinoType="bronto" className="absolute top-2 right-2 z-20" />}
               <Image
                 src={image.src}
                 alt={image.alt}

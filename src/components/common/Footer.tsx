@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FacebookIcon, InstagramIcon, LinkedinIcon, MailIcon, MapPinIcon, PhoneIcon } from '@/components/common/Icons';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Logo } from './Logo';
 import { Button } from '@/components/ui/button';
 import { navLinks } from '@/lib/placeholders';
@@ -16,13 +16,13 @@ export function Footer() {
             </p>
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon className="h-5 w-5" /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin className="h-5 w-5" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon className="h-5 w-5" /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon className="h-5 w-5" /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></a>
               </Button>
             </div>
           </div>
@@ -44,15 +44,15 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Get In Touch</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
-                <MapPinIcon className="h-4 w-4 mr-3 mt-1 shrink-0 text-primary" />
+                <MapPin className="h-4 w-4 mr-3 mt-1 shrink-0 text-primary" />
                 <span className="text-muted-foreground">IISER Berhampur, Transit Campus, Govt. ITI, Berhampur, Engineering School Junction, NH 59, Berhampur, Odisha 760010</span>
               </li>
               <li className="flex items-center">
-                <MailIcon className="h-4 w-4 mr-3 shrink-0 text-primary" />
+                <Mail className="h-4 w-4 mr-3 shrink-0 text-primary" />
                 <a href="mailto:iiec@iiserbpr.ac.in" className="text-muted-foreground hover:text-primary transition-colors">iiec@iiserbpr.ac.in</a>
               </li>
               <li className="flex items-center">
-                <PhoneIcon className="h-4 w-4 mr-3 shrink-0 text-primary" />
+                <Phone className="h-4 w-4 mr-3 shrink-0 text-primary" />
                 <span className="text-muted-foreground">+91-123-456-7890</span>
               </li>
             </ul>

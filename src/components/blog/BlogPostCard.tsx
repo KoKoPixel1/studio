@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import Link from 'next/link';
-import { UserIcon, CalendarIcon, ArrowRightIcon } from '@/components/common/Icons';
+import { User, Calendar, ArrowRight } from 'lucide-react';
 
 interface BlogPostCardProps {
   title: string;
@@ -35,11 +35,11 @@ export function BlogPostCard({ title, author, date, excerpt, imageUrl, dataAiHin
         </CardTitle>
         <div className="flex items-center text-sm text-muted-foreground mb-4 space-x-4">
           <div className="flex items-center">
-            <UserIcon className="h-4 w-4 mr-2" />
+            <User className="h-4 w-4 mr-2" />
             <span>{author}</span>
           </div>
           <div className="flex items-center">
-            <CalendarIcon className="h-4 w-4 mr-2" />
+            <Calendar className="h-4 w-4 mr-2" />
             <span>{date}</span>
           </div>
         </div>
@@ -47,7 +47,7 @@ export function BlogPostCard({ title, author, date, excerpt, imageUrl, dataAiHin
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Link href="#" className="font-semibold text-primary hover:underline flex items-center">
-          Read More <ArrowRightIcon className="ml-2 h-4 w-4" />
+          Read More <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
       </CardFooter>
     </Card>

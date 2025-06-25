@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CalendarIcon, ArrowRightIcon } from '@/components/common/Icons';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 interface EventCardProps {
@@ -30,14 +30,14 @@ export function EventCard({ title, date, description, imageUrl, isUpcoming = fal
       <CardContent className="p-6 flex-grow">
         <CardTitle className="mb-2 text-xl text-gradient">{title}</CardTitle>
         <div className="flex items-center text-sm text-muted-foreground mb-4">
-          <CalendarIcon className="h-4 w-4 mr-2" />
+          <Calendar className="h-4 w-4 mr-2" />
           <span>{date}</span>
         </div>
         <p className="text-sm text-foreground">{description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Button variant="outline">
-          Learn More <ArrowRightIcon className="ml-2 h-4 w-4" />
+          Learn More <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
     </Card>

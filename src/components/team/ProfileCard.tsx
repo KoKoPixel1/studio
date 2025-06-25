@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { LinkedinIcon, TwitterIcon } from '@/components/common/Icons';
+import { Linkedin, Twitter } from 'lucide-react';
 
 interface ProfileCardProps {
   name: string;
@@ -30,10 +30,10 @@ export function ProfileCard({ name, role, imageUrl, bio, dataAiHint }: ProfileCa
         <p className="text-muted-foreground text-sm mb-4">{bio}</p>
         <div className="flex justify-center space-x-2">
             <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label={`${name}'s LinkedIn`}><LinkedinIcon className="h-4 w-4" /></a>
+                <a href="#" aria-label={`${name}'s LinkedIn`}><Linkedin className="h-4 w-4" /></a>
             </Button>
             <Button variant="outline" size="icon" asChild>
-                <a href="#" aria-label={`${name}'s Twitter`}><TwitterIcon className="h-4 w-4" /></a>
+                <a href="#" aria-label={`${name}'s Twitter`}><Twitter className="h-4 w-4" /></a>
             </Button>
         </div>
       </CardContent>

@@ -112,13 +112,13 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gradient transition-all">Meet Our Team</h2>
+            <h2 className="text-3xl font-bold text-gradient transition-all">Meet Our Coordinators</h2>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
-              The driving force behind IIEC's success.
+              The guiding force behind our initiatives.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.core.filter(member => member.name !== 'Saanvi Rao Nagavaram').slice(0, 3).map((member, index) => (
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {teamMembers.core.filter(member => member.role === 'Coordinator').map((member, index) => (
               <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
             ))}
           </div>

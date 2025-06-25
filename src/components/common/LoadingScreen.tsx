@@ -7,8 +7,12 @@ import { cn } from '@/lib/utils';
 
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Ensure this only runs on the client
+    setIsClient(true);
+
     // Increased timeout to allow Spline scene to load
     const timer = setTimeout(() => setLoading(false), 3000); 
     return () => clearTimeout(timer);
@@ -22,10 +26,12 @@ export function LoadingScreen() {
       )}
       aria-hidden={!loading}
     >
-      <Spline
-        scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
-        className="!absolute inset-0 z-0"
-      />
+      {isClient && (
+        <Spline
+          scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
+          className="!absolute inset-0 z-0"
+        />
+      )}
       <div className="relative z-10">
         <Logo />
       </div>

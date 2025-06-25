@@ -23,7 +23,7 @@ export function HiddenDino({ dinoId, className }: HiddenDinoProps) {
     <button
       onClick={handleClick}
       className={cn(
-        "z-10 text-transparent hover:text-foreground/30 transition-colors duration-300 focus:outline-none focus:text-foreground/30",
+        "z-10 text-foreground/30 hover:text-primary hover:scale-110 transition-all duration-300 focus:outline-none focus:text-primary",
         className
       )}
       aria-label="Find the dinosaur"

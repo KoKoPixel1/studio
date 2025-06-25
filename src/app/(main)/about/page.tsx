@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 relative">
-               <HiddenDino dinoId="about-dino" className="absolute top-0 -right-4" />
+               <HiddenDino dinoId="about-dino" dinoType="bronto" className="absolute top-0 -right-4" />
               <h2 className="text-3xl font-bold text-gradient">Our Vision & Mission</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>

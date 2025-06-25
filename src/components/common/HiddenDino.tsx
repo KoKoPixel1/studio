@@ -2,14 +2,15 @@
 
 import { useDinoHunt } from './DinoHuntProvider';
 import { cn } from '@/lib/utils';
-import { Dinosaur } from 'lucide-react';
+import { DinosaurIcon, type DinoType } from './DinosaurIcons';
 
 interface HiddenDinoProps {
   dinoId: string;
+  dinoType: DinoType;
   className?: string;
 }
 
-export function HiddenDino({ dinoId, className }: HiddenDinoProps) {
+export function HiddenDino({ dinoId, dinoType, className }: HiddenDinoProps) {
   const { dinos, findDino } = useDinoHunt();
 
   if (dinos[dinoId]) {
@@ -30,7 +31,7 @@ export function HiddenDino({ dinoId, className }: HiddenDinoProps) {
       aria-label="Find the dinosaur"
       title="You found something..."
     >
-      <Dinosaur className="w-8 h-8" />
+      <DinosaurIcon type={dinoType} className="w-8 h-8" />
     </button>
   );
 }

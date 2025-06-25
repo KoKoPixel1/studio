@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 import { useToast } from '@/hooks/use-toast';
 
 const DINO_IDS = ['home-dino', 'about-dino', 'contact-dino'];
+const TOTAL_DINOS = DINO_IDS.length;
 
 type DinoHuntState = {
   dinos: Record<string, boolean>;
@@ -25,7 +26,19 @@ export function DinoHuntProvider({ children }: { children: ReactNode }) {
   const [achievementAwarded, setAchievementAwarded] = useState(false);
 
   const findDino = (id: string) => {
-    setDinos(prev => ({ ...prev, [id]: true }));
+    if (dinos[id]) return; 
+
+    const newDinos = { ...dinos, [id]: true };
+    const foundCount = Object.values(newDinos).filter(Boolean).length;
+    
+    setDinos(newDinos);
+
+    if (foundCount < TOTAL_DINOS) {
+      toast({
+        title: '🦖 Dino Found!',
+        description: `You've found ${foundCount} of ${TOTAL_DINOS} dinosaurs.`,
+      });
+    }
   };
   
   const allFound = Object.values(dinos).every(Boolean);

@@ -75,7 +75,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative">
-            <HiddenDino dinoId="home-dino" className="absolute -top-4 -left-4" />
+            <HiddenDino dinoId="home-dino" dinoType="trex" className="absolute -top-4 -left-4" />
             <Image 
               src="https://placehold.co/600x600.png" 
               alt="Team discussing ideas" 

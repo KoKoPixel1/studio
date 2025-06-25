@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <Card className="relative">
-               <HiddenDino dinoId="contact-dino" className="absolute top-4 -right-4" />
+               <HiddenDino dinoId="contact-dino" dinoType="ptero" className="absolute top-4 -right-4" />
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>

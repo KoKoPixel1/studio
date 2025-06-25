@@ -43,16 +43,14 @@ export function LoadingScreen() {
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[200] flex items-center justify-center bg-background transition-opacity duration-1000 ease-in-out',
+        'fixed inset-0 z-[200] flex items-center justify-center bg-background/95 backdrop-blur-sm transition-opacity duration-500 ease-out',
         loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
       aria-hidden={!loading}
     >
-      <div className="flex flex-col items-center gap-4 w-48">
-        <div>
-          <Logo />
-        </div>
-        <Progress value={progress} className="h-2 w-full" />
+      <Progress value={progress} className="absolute top-0 left-0 h-1 w-full rounded-none bg-transparent" />
+      <div className="animate-in fade-in zoom-in-95 duration-1000">
+        <Logo />
       </div>
     </div>
   );

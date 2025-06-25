@@ -10,21 +10,44 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Loader2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }),
   year: z.string({ required_error: 'Please select your year of study.' }),
-  department: z.string({ required_error: 'Please select your department.' }),
+  department: z.string().min(2, { message: 'Department must be at least 2 characters.' }),
 });
+
+const departments = [
+  'Physics',
+  'Chemistry',
+  'Mathematics',
+  'Biology',
+  'Earth Sciences',
+  'Computer Science',
+];
 
 export function JoinForm() {
   const { toast } = useToast();
+  const [departmentPlaceholder, setDepartmentPlaceholder] = useState(departments[0]);
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      index = (index + 1) % departments.length;
+      setDepartmentPlaceholder(departments[index]);
+    }, 2000); // Change placeholder every 2 seconds
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
       email: '',
+      department: '',
     },
   });
 
@@ -124,21 +147,9 @@ export function JoinForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Department</FormLabel>
-                       <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select your department" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="Physics">Physics</SelectItem>
-                          <SelectItem value="Chemistry">Chemistry</SelectItem>
-                          <SelectItem value="Mathematics">Mathematics</SelectItem>
-                          <SelectItem value="Biology">Biology</SelectItem>
-                          <SelectItem value="Earth Sciences">Earth Sciences</SelectItem>
-                          <SelectItem value="Computer Science">Computer Science</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormControl>
+                        <Input placeholder={departmentPlaceholder} {...field} disabled={isSubmitting} />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}

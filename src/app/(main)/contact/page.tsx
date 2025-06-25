@@ -2,6 +2,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin, Phone, User } from 'lucide-react';
+import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function ContactPage() {
   return (
@@ -13,7 +14,8 @@ export default function ContactPage() {
       <div className="container py-16 md:py-24">
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <Card>
+            <Card className="relative">
+               <HiddenDino dinoId="contact-dino" className="absolute top-4 -right-4" />
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>

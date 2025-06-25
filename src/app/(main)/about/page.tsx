@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { PageHeader } from '@/components/common/PageHeader';
-import { teamMembers } from '@/lib/placeholders';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Award, Zap, Users, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function AboutPage() {
   const activities = [
@@ -24,7 +24,8 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 relative">
+               <HiddenDino dinoId="about-dino" className="absolute top-0 -right-4" />
               <h2 className="text-3xl font-bold text-gradient">Our Vision & Mission</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>

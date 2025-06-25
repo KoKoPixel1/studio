@@ -6,6 +6,7 @@ import { ArrowRight, Lightbulb, Target, Users, Handshake } from 'lucide-react';
 import { EventCard } from '@/components/events/EventCard';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { events, teamMembers, sponsors } from '@/lib/placeholders';
+import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function Home() {
   return (
@@ -73,7 +74,8 @@ export default function Home() {
               <Link href="/about">Discover Our Mission <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
-          <div>
+          <div className="relative">
+            <HiddenDino dinoId="home-dino" className="absolute -top-4 -left-4" />
             <Image 
               src="https://placehold.co/600x600.png" 
               alt="Team discussing ideas" 

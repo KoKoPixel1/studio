@@ -1,36 +1,27 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
-
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-});
 
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Increased timeout to allow Spline scene to load
-    const timer = setTimeout(() => setLoading(false), 3000); 
+    // Set a timer to hide the loading screen
+    const timer = setTimeout(() => setLoading(false), 1500); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[200] flex items-center justify-center bg-background transition-opacity duration-500 ease-in-out',
+        'fixed inset-0 z-[200] flex items-center justify-center bg-background transition-opacity duration-1000 ease-in-out',
         loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
       aria-hidden={!loading}
     >
-      <Spline
-        scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
-        className="!absolute inset-0 z-0"
-      />
-      <div className="relative z-10">
+      <div className="relative z-10 animate-pulse">
         <Logo />
       </div>
     </div>

@@ -2,7 +2,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { startups } from '@/lib/placeholders';
-import { User } from 'lucide-react';
+import { UserIcon } from '@/components/common/Icons';
 
 export default function StartupsPage() {
   return (
@@ -31,7 +31,7 @@ export default function StartupsPage() {
               </CardContent>
               <CardFooter className="p-6 pt-0 bg-secondary/50">
                 <div className="flex items-center text-sm font-medium">
-                  <User className="h-4 w-4 mr-2 text-primary" />
+                  <UserIcon className="h-4 w-4 mr-2 text-primary" />
                   <span className="text-muted-foreground mr-1">Founder:</span>
                   <span className="text-foreground">{startup.founder}</span>
                 </div>

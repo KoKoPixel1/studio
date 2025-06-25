@@ -3,16 +3,16 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { teamMembers } from '@/lib/placeholders';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Zap, Users, Lightbulb } from 'lucide-react';
+import { AwardIcon, ZapIcon, UsersIcon, LightbulbIcon } from '@/components/common/Icons';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function AboutPage() {
   const activities = [
-    { icon: <Zap className="h-6 w-6 text-primary" />, title: "E-Summit", description: "Our annual flagship event bringing together students, entrepreneurs, and investors." },
-    { icon: <Lightbulb className="h-6 w-6 text-primary" />, title: "Ideation Workshops", description: "Interactive sessions to help students generate and validate their startup ideas." },
-    { icon: <Award className="h-6 w-6 text-primary" />, title: "Competitions", description: "Business plan and pitch competitions to foster a competitive spirit." },
-    { icon: <Users className="h-6 w-6 text-primary" />, title: "Speaker Sessions", description: "Inspiring talks from successful entrepreneurs and industry experts." },
+    { icon: <ZapIcon className="h-6 w-6 text-primary" />, title: "E-Summit", description: "Our annual flagship event bringing together students, entrepreneurs, and investors." },
+    { icon: <LightbulbIcon className="h-6 w-6 text-primary" />, title: "Ideation Workshops", description: "Interactive sessions to help students generate and validate their startup ideas." },
+    { icon: <AwardIcon className="h-6 w-6 text-primary" />, title: "Competitions", description: "Business plan and pitch competitions to foster a competitive spirit." },
+    { icon: <UsersIcon className="h-6 w-6 text-primary" />, title: "Speaker Sessions", description: "Inspiring talks from successful entrepreneurs and industry experts." },
   ];
 
   return (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Target, Users, Handshake } from 'lucide-react';
+import { ArrowRightIcon, LightbulbIcon, TargetIcon, UsersIcon, HandshakeIcon } from '@/components/common/Icons';
 import { EventCard } from '@/components/events/EventCard';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { events, teamMembers, sponsors } from '@/lib/placeholders';
@@ -42,21 +42,21 @@ export default function Home() {
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full"><Lightbulb className="w-6 h-6 text-primary"/></div>
+                <div className="bg-primary/10 p-3 rounded-full"><LightbulbIcon className="w-6 h-6 text-primary"/></div>
                 <div>
                   <h3 className="font-semibold">Ideation & Innovation</h3>
                   <p className="text-sm text-muted-foreground">Workshops and sessions to spark and refine groundbreaking ideas.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full"><Target className="w-6 h-6 text-primary"/></div>
+                <div className="bg-primary/10 p-3 rounded-full"><TargetIcon className="w-6 h-6 text-primary"/></div>
                 <div>
                   <h3 className="font-semibold">Skill Development</h3>
                   <p className="text-sm text-muted-foreground">Building essential entrepreneurial skills through hands-on training.</p>
                 </div>
               </div>
                <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full"><Handshake className="w-6 h-6 text-primary"/></div>
+                <div className="bg-primary/10 p-3 rounded-full"><HandshakeIcon className="w-6 h-6 text-primary"/></div>
                 <div>
                   <h3 className="font-semibold">Networking Opportunities</h3>
                   <p className="text-sm text-muted-foreground">Connecting students with mentors, investors, and industry leaders.</p>
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
              <Button asChild className="mt-8">
-              <Link href="/about">Discover Our Mission <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link href="/about">Discover Our Mission <ArrowRightIcon className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
           <div>
@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild variant="outline">
-              <Link href="/events">View All Events <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link href="/events">View All Events <ArrowRightIcon className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild>
-              <Link href="/team">See Full Team <Users className="ml-2 h-4 w-4" /></Link>
+              <Link href="/team">See Full Team <UsersIcon className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>

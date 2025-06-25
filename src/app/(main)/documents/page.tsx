@@ -1,7 +1,7 @@
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { documents } from '@/lib/placeholders';
-import { Download, FileText } from 'lucide-react';
+import { DownloadIcon, FileTextIcon } from '@/components/common/Icons';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -22,12 +22,12 @@ export default function DocumentsPage() {
               {documents.map((doc, index) => (
                 <li key={index} className="flex items-center justify-between p-4 rounded-lg bg-secondary">
                   <div className="flex items-center">
-                    <FileText className="h-5 w-5 mr-3 text-primary" />
+                    <FileTextIcon className="h-5 w-5 mr-3 text-primary" />
                     <span className="font-medium">{doc.name}</span>
                   </div>
                   <Button asChild variant="outline">
                     <Link href={doc.url}>
-                      Download <Download className="ml-2 h-4 w-4" />
+                      Download <DownloadIcon className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </li>

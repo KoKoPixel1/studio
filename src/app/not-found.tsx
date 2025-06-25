@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
-import { Frown } from 'lucide-react';
+import { FrownIcon } from '@/components/common/Icons';
 
 export default function NotFound() {
   return (
@@ -10,7 +10,7 @@ export default function NotFound() {
       <Header />
       <main className="flex-grow">
         <div className="container flex flex-col items-center justify-center text-center py-24">
-            <Frown className="h-24 w-24 text-primary mb-6" />
+            <FrownIcon className="h-24 w-24 text-primary mb-6" />
             <h1 className="text-6xl font-bold tracking-tighter text-gradient">404</h1>
             <h2 className="text-3xl font-semibold mt-4 mb-2 text-gradient">Page Not Found</h2>
             <p className="max-w-md text-muted-foreground mb-8">

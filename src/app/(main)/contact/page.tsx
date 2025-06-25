@@ -1,7 +1,6 @@
 import { PageHeader } from '@/components/common/PageHeader';
-import { ContactForm } from '@/components/contact/ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MapPin, Phone, User } from 'lucide-react';
+import { Mail, MapPin, Phone, User, Info } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -13,7 +12,7 @@ export default function ContactPage() {
       <div className="container py-16 md:py-24">
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <Card className="relative">
+            <Card className="relative h-full">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>
@@ -78,7 +77,17 @@ export default function ContactPage() {
             </Card>
           </div>
           <div className="lg:col-span-3">
-            <ContactForm />
+             <Card className="h-full flex flex-col justify-center items-center text-center p-6">
+                <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
+                    <Info className="h-10 w-10 text-primary" />
+                </div>
+                <CardHeader className="p-0">
+                    <CardTitle>Form Unavailable</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                    <p className="text-muted-foreground">The contact form is temporarily disabled. Please use the email addresses provided to get in touch with us.</p>
+                </CardContent>
+            </Card>
           </div>
         </div>
       </div>

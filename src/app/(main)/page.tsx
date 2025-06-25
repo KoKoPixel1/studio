@@ -11,21 +11,27 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-24 sm:py-32 lg:py-40 text-center bg-transparent animate-in fade-in duration-500">
-        <div className="container">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-center">
-            <span className="text-gradient">
-              Fostering Innovation, Inspiring Entrepreneurs
-            </span>
+      <section className="relative h-[80vh] min-h-[500px] w-full flex items-center justify-center text-center text-white">
+         <Image
+            src="https://placehold.co/1920x1080.png"
+            alt="IIEC Team"
+            fill
+            className="object-cover brightness-50"
+            data-ai-hint="innovation team"
+            priority
+          />
+        <div className="relative z-10 container animate-in fade-in duration-500">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
+            Fostering Innovation, Inspiring Entrepreneurs
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground animate-in fade-in delay-200 duration-500">
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-white/90 animate-in fade-in delay-200 duration-500">
             The Innovation and Incubation Entrepreneurship Cell (IIEC) of IISER Berhampur is dedicated to building a vibrant startup ecosystem.
           </p>
           <div className="mt-8 flex justify-center gap-4 animate-in fade-in delay-400 duration-500">
             <Button asChild size="lg">
               <Link href="/events">Upcoming Events</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
               <Link href="/about">Learn More</Link>
             </Button>
           </div>

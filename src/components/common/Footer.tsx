@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react
 import { Logo } from './Logo';
 import { Button } from '@/components/ui/button';
 import { navLinks } from '@/lib/placeholders';
+import { NewsletterForm } from './NewsletterForm';
 
 export function Footer() {
   return (
@@ -61,8 +62,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Join Our Newsletter</h3>
             <p className="text-sm text-muted-foreground mb-4">Stay updated with our latest events and initiatives.</p>
-            {/* Newsletter form can be added here */}
-            <p className="text-xs text-muted-foreground">Coming soon.</p>
+            <NewsletterForm />
           </div>
         </div>
 

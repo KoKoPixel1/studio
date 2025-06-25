@@ -8,7 +8,7 @@ export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,7 +20,7 @@ export function LoadingScreen() {
       )}
       aria-hidden={!loading}
     >
-      <div className="animate-pulse">
+      <div className="animate-fade-in-out">
         <Logo />
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* About Us Snippet Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold text-gradient transition-all">Nurturing the Next Generation of Innovators</h2>
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-20 md:py-28 bg-transparent">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gradient transition-all">Upcoming Events</h2>
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gradient transition-all">Meet Our Coordinators</h2>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-20 md:py-28 bg-transparent">
+      <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gradient transition-all">Our Valued Sponsors</h2>

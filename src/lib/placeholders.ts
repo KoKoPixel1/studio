@@ -13,6 +13,44 @@ export const navLinks = [
 
 export const teamMembers = {
   committee: [
+    { name: 'Nayanshi', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'ADITYA RAJ', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Sayani Koley', role: 'Public Relations & Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR & Event teams.', dataAiHint: 'student portrait' },
+    { name: 'Asmit Ajay Sangamwar', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Aradhya Dixit', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Aryan Mahapatra', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Lisa Mohanty', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Nikhil', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
+    { name: 'Abhijit', role: 'Videography & Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Content teams.', dataAiHint: 'student portrait' },
+    { name: 'Dev Ratn', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
+    { name: 'Sarthak Oram', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
+    { name: 'Anshuman Panda', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
+    { name: 'Vrinda Gupta', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Naman Yadav', role: 'Design & Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design & Content teams.', dataAiHint: 'student portrait' },
+    { name: 'Prince Kumar', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Rahul Biswas', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Saswata Prakash Dey', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Mahesh Kumar Meher', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Saloni Rani Marndi', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Barsha', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
+    { name: 'Tias Das', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
+    { name: 'Deepak Raj', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
+    { name: 'Shrirang', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
+    { name: 'Swarnabha Banerjee', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
+    { name: 'Kiran Manisha Priyadarsini', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
+    { name: 'Bhoomi Nayyar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'K Manoj Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Baiju Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Pragya Rawat', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Ashish Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Vatsal Srivastava', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Aryan Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'Sharda Rani Meher', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
+    { name: 'MAHAVIRYA SUBHASH PAWAR', role: 'Host Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Host team.', dataAiHint: 'student portrait' },
+    { name: 'Calvino Carnet', role: 'Host Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Host team.', dataAiHint: 'student portrait' },
+    { name: 'Priyansu Majhi', role: 'Tech Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Tech team.', dataAiHint: 'student portrait' },
+  ],
+  core: [
     {
       name: 'Linkan Pradhan',
       role: 'Coordinator',
@@ -77,58 +115,41 @@ export const teamMembers = {
       dataAiHint: 'professional headshot',
     },
   ],
-  core: [
-    { name: 'Nayanshi', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'ADITYA RAJ', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Sayani Koley', role: 'Public Relations & Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR & Event teams.', dataAiHint: 'student portrait' },
-    { name: 'Asmit Ajay Sangamwar', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Aradhya Dixit', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Aryan Mahapatra', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Lisa Mohanty', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Nikhil', role: 'Public Relations Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the PR team.', dataAiHint: 'student portrait' },
-    { name: 'Abhijit', role: 'Videography & Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Content teams.', dataAiHint: 'student portrait' },
-    { name: 'Dev Ratn', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
-    { name: 'Sarthak Oram', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
-    { name: 'Anshuman Panda', role: 'Videography & Photography Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Videography & Photography team.', dataAiHint: 'student portrait' },
-    { name: 'Vrinda Gupta', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Naman Yadav', role: 'Design & Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design & Content teams.', dataAiHint: 'student portrait' },
-    { name: 'Prince Kumar', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Rahul Biswas', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Saswata Prakash Dey', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Mahesh Kumar Meher', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Saloni Rani Marndi', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Barsha', role: 'Design Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Design team.', dataAiHint: 'student portrait' },
-    { name: 'Tias Das', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
-    { name: 'Deepak Raj', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
-    { name: 'Shrirang', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
-    { name: 'Swarnabha Banerjee', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
-    { name: 'Kiran Manisha Priyadarsini', role: 'Content Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Content team.', dataAiHint: 'student portrait' },
-    { name: 'Bhoomi Nayyar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'K Manoj Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Baiju Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Pragya Rawat', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Ashish Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Vatsal Srivastava', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Aryan Kumar', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'Sharda Rani Meher', role: 'Event Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Event team.', dataAiHint: 'student portrait' },
-    { name: 'MAHAVIRYA SUBHASH PAWAR', role: 'Host Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Host team.', dataAiHint: 'student portrait' },
-    { name: 'Calvino Carnet', role: 'Host Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Host team.', dataAiHint: 'student portrait' },
-    { name: 'Priyansu Majhi', role: 'Tech Team', imageUrl: 'https://placehold.co/400x400.png', bio: 'A dedicated member of the Tech team.', dataAiHint: 'student portrait' },
-  ],
   alumni: [
     {
-      name: 'Olivia Wilson',
-      role: 'Ex-President (2022)',
+      name: 'Priya Sharma',
+      role: 'Ex-President (2023)',
       imageUrl: 'https://placehold.co/400x400.png',
-      bio: 'Now a successful startup founder, building on the IIEC foundation.',
+      bio: 'Founder at InnovateU, now mentoring early-stage startups.',
       dataAiHint: 'founder portrait',
     },
     {
-      name: 'James Taylor',
-      role: 'Ex-Vice President (2022)',
+      name: 'Rohan Gupta',
+      role: 'Ex-Tech Lead (2023)',
       imageUrl: 'https://placehold.co/400x400.png',
-      bio: 'Working as a product manager at a leading tech company.',
+      bio: 'Software Engineer at a leading AI company, focusing on NLP.',
       dataAiHint: 'man smiling',
+    },
+    {
+      name: 'Aisha Khan',
+      role: 'Ex-Marketing Lead (2022)',
+      imageUrl: 'https://placehold.co/400x400.png',
+      bio: 'Marketing Strategist for a fast-growing fintech firm.',
+      dataAiHint: 'professional woman',
+    },
+    {
+      name: 'David Lee',
+      role: 'Ex-Coordinator (2022)',
+      imageUrl: 'https://placehold.co/400x400.png',
+      bio: 'Product Manager, launching innovative products in the health-tech space.',
+      dataAiHint: 'man portrait',
+    },
+    {
+      name: 'Sophia Chen',
+      role: 'Ex-Events Lead (2021)',
+      imageUrl: 'https://placehold.co/400x400.png',
+      bio: 'Manages large-scale tech conferences across the globe.',
+      dataAiHint: 'woman professional',
     },
   ],
 };
@@ -136,62 +157,142 @@ export const teamMembers = {
 export const events = {
   upcoming: [
     {
-      title: 'IPL Auction',
-      date: 'November 15, 2024',
-      description: 'A dynamic, high-energy simulation designed to blend the excitement of sports with an entrepreneurial mindset, testing strategic thinking and resource management.',
+      title: 'IdeaLaunch Bootcamp',
+      date: 'December 5, 2024',
+      description: 'An intensive weekend bootcamp to help students transform their raw ideas into pitch-ready concepts with guidance from industry mentors.',
+      details: 'Our IdeaLaunch Bootcamp is a 2-day intensive program designed for aspiring entrepreneurs at any stage. Whether you have a spark of an idea or a semi-developed concept, this bootcamp will provide the structure, mentorship, and tools you need to build a solid foundation. \n\nWhat to expect:\n- Expert-led workshops on market research, value proposition design, and business modeling.\n- One-on-one mentorship sessions with successful founders and industry professionals.\n- Collaborative sessions to brainstorm and refine ideas with peers.\n- A final mini-pitch session with constructive feedback.\n\nJoin us to accelerate your journey from idea to impact!',
       imageUrl: 'https://placehold.co/600x400.png',
-      dataAiHint: 'auction strategy',
+      dataAiHint: 'bootcamp workshop',
     },
     {
-      title: 'Enigma – The Case Study Challenge',
-      date: 'May 15, 2025',
-      description: 'A high-stakes competition sponsored by KM3 to test critical thinking, teamwork, and problem-solving through real-world business challenges.',
+      title: 'Startup Networking Night',
+      date: 'January 20, 2025',
+      description: 'An exclusive event connecting our most promising student innovators with local entrepreneurs, investors, and professionals.',
+      details: 'The Startup Networking Night is your opportunity to connect with the movers and shakers of the local startup ecosystem. This is not your typical formal event. We\'re creating a relaxed atmosphere where meaningful conversations can happen.\n\nWho will be there?\n- Angel investors and VCs looking for the next big thing.\n- Founders of successful local startups sharing their journeys.\n- Experienced professionals in tech, marketing, and finance.\n- Talented students and aspiring entrepreneurs from across campus.\n\nCome to share your ideas, get valuable feedback, find a co-founder, or simply get inspired. Light refreshments will be served.',
       imageUrl: 'https://placehold.co/600x400.png',
-      dataAiHint: 'case study',
+      dataAiHint: 'networking event',
+    },
+    {
+      title: 'Future of Tech: AI & Beyond',
+      date: 'February 10, 2025',
+      description: 'A panel discussion with leading experts on the future trends in artificial intelligence, blockchain, and sustainable tech.',
+      details: 'Join us for a thought-provoking panel discussion on the technologies that will shape our future. We have assembled a panel of distinguished experts to demystify complex topics and explore the opportunities they present for entrepreneurs.\n\nTopics of Discussion:\n- The real-world impact of Generative AI on industries.\n- The role of blockchain beyond cryptocurrency.\n- Innovations in sustainable technology and the green economy.\n- Ethical considerations in new tech development.\n\nThis event includes a moderated panel discussion followed by an open Q&A session, giving you the chance to ask your most pressing questions to the experts.',
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'panel discussion',
     },
   ],
   past: [
     {
-        title: 'Inter INCI Entrepreneurial Summit',
-        date: 'March 21-22, 2024',
-        description: 'A national platform for students from IISERs, IISc, NISER, & CEBS to showcase innovative ideas and gain mentorship.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'summit conference',
+      title: 'Inter INCI Entrepreneurial Summit',
+      date: 'March 21-22, 2024',
+      description: 'A national platform for students from IISERs, IISc, NISER, & CEBS to showcase innovative ideas and gain mentorship at IISER Kolkata.',
+      details: `( Held on 21st & 22nd March at IISER Kolkata)
+Objective:
+To foster entrepreneurial thinking and empower students from IISERs, IISc, NISER, and CEBS by providing a national platform to showcase innovative ideas, gain mentorship, and explore startup opportunities.
+About the Event:
+The Inter INCI Entrepreneurial Summit (IIE-S) is a flagship initiative that brought together bright student minds from India's top science institutes, including all seven IISERs, IISc, NISER, and CEBS. This vibrant two-day summit at IISER Kolkata created a collaborative atmosphere where participants pitched breakthrough solutions to a distinguished jury, competing for recognition and further incubation support.
+The event was enriched with expert-led sessions on crucial entrepreneurial domains—ranging from patenting strategies and technology transfer to financial management and essential soft skills. These workshops aimed to provide a well-rounded foundation for aspiring innovators.
+As a first-of-its-kind initiative, IIE-S not only highlighted student ingenuity but also cultivated a sense of real-world impact by encouraging science-driven solutions to pressing societal challenges. With direct pathways to incubation centers and an emphasis on transformation from job seekers to job creators, the summit was a true catalyst in building the next generation of scientific entrepreneurs.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'summit conference',
     },
     {
-        title: 'Influx – Welcome Session',
-        date: 'September 8, 2024',
-        description: 'An interactive session to welcome the new batch and introduce them to the culture, vision, and opportunities at IIEC.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'welcome session',
+      title: 'IPL Auction',
+      date: 'November 15, 2024',
+      description: 'A dynamic, high-energy simulation designed to blend the excitement of sports with an entrepreneurial mindset.',
+      details: `Objective:
+To simulate a high-stakes business environment where participants hone key entrepreneurial and analytical skills through strategic bidding and team-based decision-making.
+      About the Event:
+The IPL Auction, organized by IIEC, was a dynamic, high-energy simulation event designed to blend the excitement of sports with the mindset of entrepreneurship. Participants stepped into the shoes of franchise owners, building dream teams within limited budgets—mirroring real-world startup decisions involving investment, negotiation, and risk-taking.
+This event was more than just a game; it was an experiential learning platform that developed critical entrepreneurial competencies such as strategic thinking, resource management, leadership, and collaborative decision-making. The intense bidding wars tested the teams' abilities to assess value under pressure while also managing finances and forming winning strategies.
+With rapid decision-making, negotiation battles, and a fierce yet fun spirit, the IPL Auction proved to be a perfect mix of entertainment and education—showing that entrepreneurship can be both serious and thrilling. It was a crowd favourite and one of the most engaging events in the IIEC calendar.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'auction strategy',
     },
     {
-        title: 'Campus Innovation Challenge – BAHAS',
-        date: 'September 15, 2024',
-        description: 'Part of the Invenio Science Fest, this challenge invited students to address real-life campus issues with innovative and sustainable solutions.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'innovation challenge',
+      title: 'Influx – Welcome Session',
+      date: 'September 8, 2024',
+      description: 'An interactive session to welcome the new batch and introduce them to the culture, vision, and opportunities at IIEC.',
+      details: `Objective:
+To welcome the incoming batch and introduce them to the vibrant culture, vision, and opportunities offered by IIEC – the Innovation and Entrepreneurship Club.
+About the Event:
+We kicked off the new academic year with Influx, an exciting and interactive session to welcome the freshers and officially introduce them to the Innovation and Entrepreneurship Club (IIEC). This event served as a gateway for the new BSMS batch to explore the entrepreneurial spirit thriving within our campus.
+The session buzzed with enthusiasm as we shared the essence of what IIEC stands for—creativity, initiative, problem-solving, and impact-driven innovation. From ice-breaker games and club stories to real-life startup journeys and alumni achievements, the event was designed to inspire and ignite curiosity.
+We presented our vision for the upcoming year—ranging from ideation bootcamps, tech-business hackathons, inter-IISER startup collaborations, and hands-on mentoring sessions.
+Our core message to the new batch was simple:
+If you're passionate about solving real-world problems, love working in teams, and dream of turning ideas into reality—IIEC is your launchpad.
+The warm response, thoughtful questions, and eager participation from the freshers made Influx a memorable beginning. With minds aligned and spirits high, we’re excited to grow together and shape the next wave of student innovators.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'welcome session',
     },
     {
-        title: 'E-Summit – IIT Bhubaneswar',
-        date: 'Past Event',
-        description: 'An immersive experience in a vibrant entrepreneurial ecosystem with networking, competitions, and workshops.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'entrepreneurship summit',
+      title: 'Campus Innovation Challenge – BAHAS',
+      date: 'September 15, 2024',
+      description: 'Part of the Invenio Science Fest, this challenge invited students to address real-life campus issues with innovative and sustainable solutions.',
+      details: `(Invenio: 15th September, 2024)
+Objective:
+To challenge young minds to address real-life issues on campus through innovative, scalable, and sustainable solutions—fostering an ecosystem of problem solvers and changemakers.
+About the Event:
+As part of the grand Invenio Science Fest, the Campus Innovation Challenge – BAHAS emerged as a highlight event where ideas met impact. Designed to simulate real-world innovation, the challenge invited students to brainstorm and pitch actionable solutions to pressing issues faced in campus life—ranging from sustainability and mental health to digital transformation and infrastructural improvements.
+The event was more than just a competition—it was a platform for dialogue, creativity, and execution. Participants worked in teams, combining interdisciplinary knowledge with entrepreneurial strategies to design solutions that could not only be implemented on their own campuses but also adapted to wider contexts.
+With active participation from institutions like VIT Vellore, NIT Rourkela, and various IISERs, the challenge took on a national flavor. This diversity in thought and approach led to a rich exchange of ideas and meaningful conversations around innovation and student-driven change.
+BAHAS, meaning “discussion” or “debate”, perfectly captured the spirit of the event—a space where bold ideas were shared, challenged, and refined. The initiative successfully nurtured collaboration, critical thinking, and a strong sense of ownership among participants, pushing them one step closer to becoming the innovators of tomorrow.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'innovation challenge',
     },
     {
-        title: 'Stream – Annual Outreach Event',
-        date: 'February 17, 2024',
-        description: 'An interactive science festival for school students to engage with science, technology, and innovation.',
+        title: 'Enigma – The Case Study Challenge',
+        date: 'May 15, 2025',
+        description: 'A high-stakes competition sponsored by KM3 to test critical thinking, teamwork, and problem-solving through real-world business challenges.',
+        details: `Objective:
+To test and enhance participants' critical thinking, teamwork, and problem-solving abilities through real-world business and innovation challenges—fostering an entrepreneurial mindset.
+About the Event:
+Enigma was a high-stakes, case study-based competition that blended intellect, strategy, and real-world relevance into one dynamic challenge. Sponsored by KM3, the event aimed to expand its footprint by actively engaging students from IISER Berhampur, encouraging them to step into the world of structured problem-solving and business innovation.
+Participants faced complex, real-life-inspired scenarios where they were required to think fast, work smart, and make data-driven decisions under tight deadlines. Each round pushed them to apply analytical reasoning, strategic planning, and creative ideation to craft compelling and implementable solutions.
+The event wasn’t just about winning—it was about learning to solve meaningful problems, communicate clearly, and work collaboratively in high-pressure environments. Enigma sparked conversations around innovation, leadership, and critical thinking—marking it as a true incubator of the entrepreneurial spirit.
+With KM3's support, the event successfully broadened its impact, offering a professional and competitive platform that resonated with aspiring changemakers at IISER Berhampur and beyond.`,
         imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'science outreach',
+        dataAiHint: 'case study',
     },
     {
-        title: 'Project Kewda – Fragrance to Economy',
-        date: 'Past Event',
-        description: 'A hands-on educational initiative for students to understand the cultivation, processing, and economic impact of the Kewda flower in Ganjam.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        dataAiHint: 'field project',
+      title: 'E-Summit – IIT Bhubaneswar',
+      date: 'Past Event',
+      description: 'An immersive experience in a vibrant entrepreneurial ecosystem with networking, competitions, and workshops.',
+      details: `Objective:
+To immerse students in a vibrant entrepreneurial ecosystem, providing a platform to network, learn, compete, and innovate alongside leading startups, investors, and student entrepreneurs from across the country.
+About the Event:
+The E-Summit hosted by IIT Bhubaneswar stood out as a flagship celebration of entrepreneurship, innovation, and futuristic thinking. As one of the most anticipated national-level summits, it brought together budding entrepreneurs, industry experts, venture capitalists, and thought leaders under one roof.
+IIEC members actively participated, engaging in a variety of competitions, workshops, and speaker sessions that showcased the spectrum of challenges and opportunities in the startup ecosystem. From pitch battles and ideation sprints to fireside chats with successful founders, the event offered hands-on exposure to what it takes to build, scale, and sustain a venture.
+The summit’s focus extended beyond startups—it also encouraged discussions on social entrepreneurship, technology-led innovation, and sustainable growth models. For students from IISER Berhampur, it was a transformative experience that expanded their horizons and deepened their entrepreneurial insight.
+E-Summit IIT Bhubaneswar provided not just a platform, but a launchpad—equipping students with actionable knowledge, invaluable networks, and the confidence to turn their ideas into impact.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'entrepreneurship summit',
+    },
+    {
+      title: 'Stream – Annual Outreach Event',
+      date: 'February 17, 2024',
+      description: 'An interactive science festival for school students to engage with science, technology, and innovation.',
+      details: `Objective:
+To bring science, technology, innovation, and allied fields closer to school students, inspiring curiosity, sparking meaningful engagement, and nurturing a culture of exploration.
+About the Event:
+Stream, the annual outreach initiative by IISER Berhampur, is a vibrant and interactive science festival designed for school students. Hosted on the institute’s campus, the event invites children from diverse schools to engage directly with cutting-edge science, hands-on technological demonstrations, and real-world innovation experiences.
+Throughout the day, IISER students lead workshops, lab visits, and interactive sessions that explore the wonders of physics, chemistry, biology, environmental science, and emerging technologies. From simple science experiments to demo-based deep dives, school students get a rare peek into what campus research is all about—fostering early interest in STEM careers and higher education.
+By providing a collaborative, engaging, and accessible environment, Stream ensures that learning transcends textbooks. It cultivates inquiry, critical thinking, and wonder—making science relatable and enjoyable.`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'science outreach',
+    },
+    {
+      title: 'Project Kewda – Fragrance to Economy',
+      date: 'Past Event',
+      description: 'A hands-on educational initiative for students to understand the cultivation, processing, and economic impact of the Kewda flower in Ganjam.',
+      details: `Objective:
+To provide IISER students with a holistic, real-world understanding of how the fragrant Kewda flower is cultivated, processed into essential oils and fragrances, and how it significantly supports Ganjam’s rural economy.
+About the Project:
+Under Project Kewda, IISER students experienced end-to-end exposure to the journey of the Kewda (Pandanus fascicularis) flower—from plantation to distillation to marketable fragrance. This hands-on educational initiative took them into the famed khejda belt of Ganjam district, Odisha—home to India's Kewda industry, which accounts for nearly 90% of the country’s commercial production.
+Participants learned traditional and modern steam-distillation techniques used in local bhattis (processing units), witnessing firsthand the transformation of male flower spikes into Kewda rooh, attar, and floral waters. They saw how locally-grown flowers, harvested from thorny 15–18 ft shrubs yielding 30–40 flower spikes annually, undergo labour-intensive processing in deg bhabka systems to yield precious fragrance products.
+Through interactions with growers and distillers, students gained deep insight into how Kewda cultivation drives livelihoods: around 200,000 people in some 200 villages earn income from harvesting and processing, with 800 L of oil, 20,000 L of attar, and 50,000 L of floral water produced annually—generating approximately ₹120 crore in revenue. (2022-2023 Students Survey Report)`,
+      imageUrl: 'https://placehold.co/600x400.png',
+      dataAiHint: 'field project',
     },
   ],
 };

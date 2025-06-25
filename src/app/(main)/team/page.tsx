@@ -21,7 +21,7 @@ export default function TeamPage() {
           </div>
 
           <TabsContent value="committee" className="mt-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.committee.map((member, index) => (
                 <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
               ))}
@@ -29,7 +29,7 @@ export default function TeamPage() {
           </TabsContent>
 
           <TabsContent value="core" className="mt-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.core.map((member, index) => (
                 <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
               ))}

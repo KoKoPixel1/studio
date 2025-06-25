@@ -90,7 +90,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {events.upcoming.map((event, index) => (
+            {events.upcoming.slice(0, 2).map((event, index) => (
               <EventCard key={index} {...event} isUpcoming={true} dataAiHint={event.dataAiHint} />
             ))}
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.committee.slice(0, 3).map((member, index) => (
+            {teamMembers.core.slice(0, 3).map((member, index) => (
               <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
             ))}
           </div>

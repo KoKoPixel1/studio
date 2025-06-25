@@ -77,7 +77,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>Full Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
+                      <Input placeholder="Joel Miller" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

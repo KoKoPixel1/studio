@@ -31,7 +31,7 @@ export function HiddenDino({ dinoId, dinoType, className }: HiddenDinoProps) {
       aria-label="Find the dinosaur"
       title="You found something..."
     >
-      <DinosaurIcon type={dinoType} className="w-6 h-6" />
+      <DinosaurIcon type={dinoType} className="w-5 h-5" />
     </button>
   );
 }

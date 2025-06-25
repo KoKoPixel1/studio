@@ -15,7 +15,7 @@ const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email.' }),
   year: z.string({ required_error: 'Please select your year of study.' }),
-  department: z.string().min(2, { message: 'Please enter your department.' }),
+  department: z.string({ required_error: 'Please select your department.' }),
 });
 
 export function JoinForm() {
@@ -25,7 +25,6 @@ export function JoinForm() {
     defaultValues: {
       name: '',
       email: '',
-      department: '',
     },
   });
 
@@ -75,7 +74,7 @@ export function JoinForm() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
+                    <Input placeholder="Joel Miller" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -125,9 +124,21 @@ export function JoinForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Department</FormLabel>
-                      <FormControl>
-                        <Input placeholder="e.g., Computer Science" {...field} disabled={isSubmitting} />
-                      </FormControl>
+                       <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select your department" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="Physics">Physics</SelectItem>
+                          <SelectItem value="Chemistry">Chemistry</SelectItem>
+                          <SelectItem value="Mathematics">Mathematics</SelectItem>
+                          <SelectItem value="Biology">Biology</SelectItem>
+                          <SelectItem value="Earth Sciences">Earth Sciences</SelectItem>
+                          <SelectItem value="Computer Science">Computer Science</SelectItem>
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}

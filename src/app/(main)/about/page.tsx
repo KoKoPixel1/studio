@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { PageHeader } from '@/components/common/PageHeader';
-import { ProfileCard } from '@/components/team/ProfileCard';
 import { teamMembers } from '@/lib/placeholders';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Award, Zap, Users, Lightbulb } from 'lucide-react';
@@ -76,21 +75,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gradient">Our Coordinators</h2>
-            <p className="mt-2 text-muted-foreground">The guiding force behind our initiatives.</p>
-          </div>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {teamMembers.committee.map((member, index) => (
-              <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
-            ))}
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

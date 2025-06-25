@@ -20,11 +20,20 @@ export default function ContactPage() {
               <CardContent className="space-y-6">
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 mr-4 mt-1 text-primary shrink-0" />
-                  <div>
-                    <h3 className="font-semibold">Our Address</h3>
-                    <p className="text-sm text-muted-foreground">
-                      IISER Berhampur Transit Campus, Govt. ITI, Berhampur, Engineering School Junction, NH 59, Berhampur, Odisha 760010
-                    </p>
+                  <div className="space-y-4">
+                    <h3 className="font-semibold">Our Addresses</h3>
+                    <div>
+                      <h4 className="font-medium text-foreground">Permanent Campus</h4>
+                      <p className="text-sm text-muted-foreground">
+                        IISER Berhampur, At/Po: -Laudigam, Dist.- Ganjam, Odisha, India-760003
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-foreground">Transit Campus</h4>
+                      <p className="text-sm text-muted-foreground">
+                        IISER Berhampur, Govt. ITI Premises, NH-59, Engineering School Junction, Berhampur, Dist.- Ganjam, Odisha, India-760010
+                      </p>
+                    </div>
                   </div>
                 </div>
                  <div className="flex items-start">

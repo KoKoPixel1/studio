@@ -45,7 +45,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mr-3 mt-1 shrink-0 text-primary" />
-                <span className="text-muted-foreground">IISER Berhampur, Transit Campus, Govt. ITI, Berhampur, Engineering School Junction, NH 59, Berhampur, Odisha 760010</span>
+                <span className="text-muted-foreground">IISER Berhampur, At/Po: -Laudigam, Dist.- Ganjam, Odisha, India-760003</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-3 shrink-0 text-primary" />

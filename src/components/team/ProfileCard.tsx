@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Linkedin, Twitter } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 
 interface ProfileCardProps {
   name: string;
@@ -15,17 +14,6 @@ interface ProfileCardProps {
 }
 
 export function ProfileCard({ name, role, imageUrl, bio, dataAiHint }: ProfileCardProps) {
-  const { toast } = useToast();
-
-  const handleNameClick = () => {
-    if (name === 'Mihir Barman') {
-      toast({
-        title: '✨ Easter Egg Found! ✨',
-        description: 'from the dev - Have a fun day',
-      });
-    }
-  };
-
   return (
     <Card className="text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <CardHeader className="items-center">
@@ -38,8 +26,7 @@ export function ProfileCard({ name, role, imageUrl, bio, dataAiHint }: ProfileCa
           data-ai-hint={dataAiHint}
         />
         <h3
-          className="text-xl font-bold text-gradient cursor-pointer"
-          onClick={handleNameClick}
+          className="text-xl font-bold text-gradient"
         >
           {name}
         </h3>

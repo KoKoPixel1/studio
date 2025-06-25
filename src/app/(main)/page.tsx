@@ -6,7 +6,6 @@ import { ArrowRight, Lightbulb, Target, Users, Handshake } from 'lucide-react';
 import { EventCard } from '@/components/events/EventCard';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { events, teamMembers, sponsors } from '@/lib/placeholders';
-import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function Home() {
   return (
@@ -75,7 +74,6 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative">
-            <HiddenDino dinoId="home-dino" dinoType="trex" className="absolute -top-4 -left-4" />
             <Image 
               src="https://placehold.co/600x600.png" 
               alt="Team discussing ideas" 

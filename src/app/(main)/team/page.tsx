@@ -2,7 +2,6 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { teamMembers } from '@/lib/placeholders';
-import { HiddenDino } from '@/components/common/HiddenDino';
 
 export default function TeamPage() {
   return (
@@ -12,7 +11,6 @@ export default function TeamPage() {
         subtitle="The dedicated individuals driving the IIEC forward."
       />
       <div className="container py-16 md:py-24 relative">
-        <HiddenDino dinoId="team-dino" dinoType="ptero" className="absolute top-4 right-8" />
         <Tabs defaultValue="committee" className="w-full">
           <div className="w-full overflow-x-auto no-scrollbar pb-2">
             <TabsList className="w-max sm:w-auto sm:mx-auto">

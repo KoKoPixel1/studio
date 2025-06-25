@@ -4,7 +4,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LoadingScreen } from "@/components/common/LoadingScreen";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
-import { DinoHuntProvider } from "@/components/common/DinoHuntProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -27,11 +26,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <DinoHuntProvider>
-            <LoadingScreen />
-            {children}
-            <Toaster />
-          </DinoHuntProvider>
+          <LoadingScreen />
+          {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

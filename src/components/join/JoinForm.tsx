@@ -97,7 +97,7 @@ export function JoinForm() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Joel Miller" {...field} disabled={isSubmitting} />
+                    <Input placeholder="e.g. Joel Miller" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -110,7 +110,7 @@ export function JoinForm() {
                 <FormItem>
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                    <Input placeholder="you@example.com" {...field} disabled={isSubmitting} />
+                    <Input placeholder="e.g. you@example.com" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -148,7 +148,7 @@ export function JoinForm() {
                     <FormItem>
                       <FormLabel>Department</FormLabel>
                       <FormControl>
-                        <Input placeholder={departmentPlaceholder} {...field} disabled={isSubmitting} />
+                        <Input placeholder={`e.g. ${departmentPlaceholder}`} {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

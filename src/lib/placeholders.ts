@@ -4,10 +4,10 @@ export const navLinks = [
   { href: '/events', label: 'Events' },
   { href: '/team', label: 'Team' },
   { href: '/gallery', label: 'Gallery' },
-  { href: '/startups', label: 'Startups' },
-  { href: '/sponsors', label: 'Sponsors' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/faq', label: 'FAQ' },
+  // { href: '/startups', label: 'Startups' },
+  // { href: '/sponsors', label: 'Sponsors' },
+  // { href: '/blog', label: 'Blog' },
+  // { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ];
 

@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -28,14 +29,35 @@ export function JoinForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Registration Successful!',
-      description: "Thank you for your interest in IIEC. We've received your application.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+     try {
+      const response = await fetch('/api/join-us', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong. Please try again.');
+      }
+
+      toast({
+        title: 'Registration Successful!',
+        description: "Thank you for your interest in IIEC. We've received your application.",
+      });
+      form.reset();
+    } catch (error) {
+       toast({
+        title: 'Error',
+        description: (error as Error).message,
+        variant: 'destructive',
+      });
+    }
   }
+
+  const { isSubmitting } = form.formState;
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -53,7 +75,7 @@ export function JoinForm() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -66,7 +88,7 @@ export function JoinForm() {
                 <FormItem>
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                    <Input placeholder="you@example.com" {...field} />
+                    <Input placeholder="you@example.com" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -79,7 +101,7 @@ export function JoinForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Year of Study</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue placeholder="Select your year" />
@@ -104,7 +126,7 @@ export function JoinForm() {
                     <FormItem>
                       <FormLabel>Department</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., Computer Science" {...field} />
+                        <Input placeholder="e.g., Computer Science" {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -112,8 +134,9 @@ export function JoinForm() {
                 />
             </div>
             
-            <Button type="submit" className="w-full md:w-auto" disabled={form.formState.isSubmitting}>
-              {form.formState.isSubmitting ? 'Submitting...' : 'Submit Application'}
+            <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
+              {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isSubmitting ? 'Submitting...' : 'Submit Application'}
             </Button>
           </form>
         </Form>

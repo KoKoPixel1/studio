@@ -1,11 +1,15 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { PageHeader } from '@/components/common/PageHeader';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { teamMembers } from '@/lib/placeholders';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
 export default function TeamPage() {
   return (
-    <div>
+    <div className="animate-page-in">
       <PageHeader
         title="Meet the Team"
         subtitle="The dedicated individuals driving the IIEC forward."
@@ -21,27 +25,48 @@ export default function TeamPage() {
           </div>
 
           <TabsContent value="committee" className="mt-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div 
+              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {teamMembers.committee.map((member, index) => (
-                <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
+                <motion.div key={index} variants={itemVariants}>
+                  <ProfileCard {...member} dataAiHint={member.dataAiHint} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </TabsContent>
 
           <TabsContent value="core" className="mt-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div 
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {teamMembers.core.map((member, index) => (
-                <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
+                <motion.div key={index} variants={itemVariants}>
+                  <ProfileCard {...member} dataAiHint={member.dataAiHint} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </TabsContent>
           
           <TabsContent value="alumni" className="mt-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div 
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {teamMembers.alumni.map((member, index) => (
-                <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
+                <motion.div key={index} variants={itemVariants}>
+                  <ProfileCard {...member} dataAiHint={member.dataAiHint} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </TabsContent>
         </Tabs>
       </div>

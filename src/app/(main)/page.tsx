@@ -1,11 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Target, Users, Handshake } from 'lucide-react';
 import { EventCard } from '@/components/events/EventCard';
 import { ProfileCard } from '@/components/team/ProfileCard';
 import { events, teamMembers, sponsors } from '@/lib/placeholders';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
 export default function Home() {
   return (
@@ -20,28 +24,48 @@ export default function Home() {
             data-ai-hint="innovation team"
             priority
           />
-        <div className="relative z-10 container animate-in fade-in duration-500">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
+        <motion.div 
+          className="relative z-10 container"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.h1 
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter"
+            variants={itemVariants}
+          >
             Fostering Innovation, Inspiring Entrepreneurs
-          </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-white/90 animate-in fade-in delay-200 duration-500">
+          </motion.h1>
+          <motion.p 
+            className="mt-6 max-w-2xl mx-auto text-lg text-white/90"
+            variants={itemVariants}
+          >
             The Innovation and Incubation Entrepreneurship Cell (IIEC) of IISER Berhampur is dedicated to building a vibrant startup ecosystem.
-          </p>
-          <div className="mt-8 flex justify-center gap-4 animate-in fade-in delay-400 duration-500">
+          </motion.p>
+          <motion.div 
+            className="mt-8 flex justify-center gap-4"
+            variants={itemVariants}
+          >
             <Button asChild size="lg">
               <Link href="/events">Upcoming Events</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
               <Link href="/about">Learn More</Link>
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* About Us Snippet Section */}
-      <section className="py-16 md:py-24">
+      <motion.section 
+        className="py-16 md:py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div variants={itemVariants}>
             <h2 className="text-3xl font-bold text-gradient transition-all">Nurturing the Next Generation of Innovators</h2>
             <p className="mt-4 text-muted-foreground">
               IIEC is a student-run organization committed to fostering an entrepreneurial mindset among students. We provide a platform for aspiring entrepreneurs to learn, network, and grow their ideas into successful ventures.
@@ -72,8 +96,8 @@ export default function Home() {
              <Button asChild className="mt-8">
               <Link href="/about">Discover Our Mission <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
-          </div>
-          <div className="relative">
+          </motion.div>
+          <motion.div className="relative" variants={itemVariants}>
             <Image 
               src="https://placehold.co/600x600.png" 
               alt="Team discussing ideas" 
@@ -82,24 +106,38 @@ export default function Home() {
               className="rounded-lg shadow-lg"
               data-ai-hint="team collaboration"
             />
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Upcoming Events Section */}
       <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
-          <div className="text-center mb-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={itemVariants}
+          >
             <h2 className="text-3xl font-bold text-gradient transition-all">Upcoming Events</h2>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
               Join our workshops, competitions, and talks.
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          </motion.div>
+          <motion.div 
+            className="grid md:grid-cols-2 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
             {events.upcoming.slice(0, 2).map((event, index) => (
-              <EventCard key={index} {...event} isUpcoming={true} dataAiHint={event.dataAiHint} />
+              <motion.div key={index} variants={itemVariants}>
+                <EventCard {...event} isUpcoming={true} dataAiHint={event.dataAiHint} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="text-center mt-12">
             <Button asChild variant="outline">
               <Link href="/events">View All Events <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -111,17 +149,31 @@ export default function Home() {
       {/* Team Section */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="text-center mb-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={itemVariants}
+          >
             <h2 className="text-3xl font-bold text-gradient transition-all">Meet Our Coordinators</h2>
             <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
               The guiding force behind our initiatives.
             </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          </motion.div>
+          <motion.div 
+            className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
             {teamMembers.core.filter(member => member.role === 'Coordinator').map((member, index) => (
-              <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
+              <motion.div key={index} variants={itemVariants}>
+                <ProfileCard {...member} dataAiHint={member.dataAiHint} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="text-center mt-12">
             <Button asChild>
               <Link href="/team">See Full Team <Users className="ml-2 h-4 w-4" /></Link>
@@ -133,23 +185,36 @@ export default function Home() {
       {/* Sponsors Section */}
       <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
-          <div className="text-center mb-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={itemVariants}
+          >
             <h2 className="text-3xl font-bold text-gradient transition-all">Our Valued Sponsors</h2>
             <p className="mt-2 text-muted-foreground">We are grateful for the support of our partners.</p>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-8">
+          </motion.div>
+          <motion.div 
+            className="flex flex-wrap justify-center items-center gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
             {sponsors.map((sponsor, index) => (
-              <Image
-                key={index}
-                src={sponsor.logoUrl}
-                alt={`${sponsor.name} logo`}
-                width={160}
-                height={80}
-                className="object-contain"
-                data-ai-hint={sponsor.dataAiHint}
-              />
+              <motion.div key={index} variants={itemVariants}>
+                <Image
+                  src={sponsor.logoUrl}
+                  alt={`${sponsor.name} logo`}
+                  width={160}
+                  height={80}
+                  className="object-contain"
+                  data-ai-hint={sponsor.dataAiHint}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

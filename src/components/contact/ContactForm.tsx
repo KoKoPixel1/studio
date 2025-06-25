@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -29,14 +30,35 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong. Please try again.');
+      }
+
+      toast({
+        title: 'Message Sent!',
+        description: "Thank you for reaching out. We'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+       toast({
+        title: 'Error',
+        description: (error as Error).message,
+        variant: 'destructive',
+      });
+    }
   }
+
+  const { isSubmitting } = form.formState;
 
   return (
     <Card className="w-full">
@@ -55,7 +77,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>Full Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="John Doe" {...field} />
+                      <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -68,7 +90,7 @@ export function ContactForm() {
                   <FormItem>
                     <FormLabel>Email Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="you@example.com" {...field} />
+                      <Input placeholder="you@example.com" {...field} disabled={isSubmitting} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -82,7 +104,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input placeholder="Collaboration Opportunity" {...field} />
+                    <Input placeholder="Collaboration Opportunity" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -95,14 +117,15 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Your Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Tell us more about your inquiry..." className="min-h-[120px]" {...field} />
+                    <Textarea placeholder="Tell us more about your inquiry..." className="min-h-[120px]" {...field} disabled={isSubmitting} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full md:w-auto" disabled={form.formState.isSubmitting}>
-              {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+            <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
+              {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </Form>

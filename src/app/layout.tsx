@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "IIEC Website",
   description: "Official website of the Innovation and Incubation Entrepreneurship Cell (IIEC), IISER Berhampur.",
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#192A56' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+  ],
 };
 
 export default function RootLayout({

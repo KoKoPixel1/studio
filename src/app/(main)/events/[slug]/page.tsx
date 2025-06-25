@@ -6,6 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Ticket } from 'lucide-react';
 
+export async function generateStaticParams() {
+  const allEvents = [...events.upcoming, ...events.past];
+  return allEvents.map((event) => ({
+    slug: event.slug,
+  }));
+}
+
 export default function EventDetailPage({ params }: { params: { slug: string } }) {
   const allEvents = [...events.upcoming, ...events.past];
   const event = allEvents.find(e => e.slug === params.slug);
@@ -15,7 +22,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
   }
 
   return (
-    <div>
+    <div className="animate-page-in">
       <div className="relative h-[40vh] min-h-[300px] w-full">
         <Image
           src={event.imageUrl}

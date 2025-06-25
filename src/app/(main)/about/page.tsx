@@ -1,9 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Award, Zap, Users, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { containerVariants, itemVariants } from '@/lib/animations';
 
 export default function AboutPage() {
   const activities = [
@@ -14,16 +18,21 @@ export default function AboutPage() {
   ];
 
   return (
-    <div>
+    <div className="animate-page-in">
       <PageHeader
         title="About IIEC"
         subtitle="Fostering a culture of innovation and entrepreneurship at IISER Berhampur."
       />
       
-      <section className="py-16 md:py-24">
+      <motion.section 
+        className="py-16 md:py-24"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 relative">
+            <motion.div className="space-y-6 relative" variants={itemVariants}>
               <h2 className="text-3xl font-bold text-gradient">Our Vision & Mission</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
@@ -36,8 +45,8 @@ export default function AboutPage() {
               <Button asChild>
                 <Link href="/contact">Get In Touch</Link>
               </Button>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={itemVariants}>
               <Image 
                 src="https://placehold.co/600x400.png"
                 alt="Team working together"
@@ -46,32 +55,46 @@ export default function AboutPage() {
                 className="rounded-lg shadow-xl"
                 data-ai-hint="office teamwork"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <section className="py-16 md:py-24 bg-transparent">
         <div className="container">
-          <div className="text-center mb-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={itemVariants}
+          >
             <h2 className="text-3xl font-bold text-gradient">What We Do</h2>
             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
               Our activities are designed to inspire, educate, and support aspiring entrepreneurs at every stage of their journey.
             </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          </motion.div>
+          <motion.div 
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
             {activities.map((activity, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">{activity.icon}</div>
-                  <CardTitle>{activity.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{activity.description}</p>
-                </CardContent>
-              </Card>
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="text-center h-full">
+                  <CardHeader>
+                    <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">{activity.icon}</div>
+                    <CardTitle>{activity.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{activity.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

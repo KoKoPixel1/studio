@@ -1,18 +1,18 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Spline from '@splinetool/react-spline';
+import dynamic from 'next/dynamic';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
+
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Ensure this only runs on the client
-    setIsClient(true);
-
     // Increased timeout to allow Spline scene to load
     const timer = setTimeout(() => setLoading(false), 3000); 
     return () => clearTimeout(timer);
@@ -26,12 +26,10 @@ export function LoadingScreen() {
       )}
       aria-hidden={!loading}
     >
-      {isClient && (
-        <Spline
-          scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
-          className="!absolute inset-0 z-0"
-        />
-      )}
+      <Spline
+        scene="https://my.spline.design/vaporwavebackground-md8OmvzXEK7MBA99aBzGIUxE/"
+        className="!absolute inset-0 z-0"
+      />
       <div className="relative z-10">
         <Logo />
       </div>

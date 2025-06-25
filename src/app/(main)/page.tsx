@@ -118,7 +118,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.core.slice(0, 3).map((member, index) => (
+            {teamMembers.core.filter(member => member.name !== 'Saanvi Rao Nagavaram').slice(0, 3).map((member, index) => (
               <ProfileCard key={index} {...member} dataAiHint={member.dataAiHint} />
             ))}
           </div>

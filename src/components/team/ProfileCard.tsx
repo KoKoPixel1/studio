@@ -21,7 +21,7 @@ export function ProfileCard({ name, role, imageUrl, bio, dataAiHint }: ProfileCa
     if (name === 'Mihir Barman') {
       toast({
         title: '✨ Easter Egg Found! ✨',
-        description: 'Shoutout to Mihir for the awesome dev work on this site!',
+        description: 'from the dev - Have a fun day',
       });
     }
   };

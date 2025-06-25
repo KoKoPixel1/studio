@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LoadingScreen } from "@/components/common/LoadingScreen";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
+import { EasterEggListeners } from "@/components/common/EasterEggListeners";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <EasterEggListeners />
           <LoadingScreen />
           {children}
           <Toaster />

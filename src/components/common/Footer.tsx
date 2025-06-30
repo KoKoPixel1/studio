@@ -61,8 +61,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Join Our Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">Our newsletter is coming soon. Stay tuned for updates!</p>
-            {/* <NewsletterForm /> */}
+            <NewsletterForm />
           </div>
         </div>
 

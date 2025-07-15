@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { events } from '@/lib/placeholders';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, Ticket } from 'lucide-react';
+import { Calendar, Ticket, MapPin, Clock } from 'lucide-react';
 
 export async function generateStaticParams() {
   const allEvents = [...events.upcoming, ...events.past];
@@ -81,8 +81,24 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                 <div className="flex items-start">
                   <Calendar className="h-5 w-5 mr-3 mt-1 text-primary shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Date & Time</h3>
+                    <h3 className="font-semibold">Date</h3>
                     <p className="text-sm text-muted-foreground">{event.date}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <Clock className="h-5 w-5 mr-3 mt-1 text-primary shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Time</h3>
+                    <p className="text-sm text-muted-foreground">{event.time}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <MapPin className="h-5 w-5 mr-3 mt-1 text-primary shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Location</h3>
+                    <p className="text-sm text-muted-foreground">{event.place}</p>
                   </div>
                 </div>
                 

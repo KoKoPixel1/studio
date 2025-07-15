@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight, MapPin, Clock } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 interface EventCardProps {
@@ -15,9 +15,11 @@ interface EventCardProps {
   imageUrl: string;
   isUpcoming?: boolean;
   dataAiHint?: string;
+  place?: string;
+  time?: string;
 }
 
-export function EventCard({ title, slug, date, description, imageUrl, isUpcoming = false, dataAiHint }: EventCardProps) {
+export function EventCard({ title, slug, date, description, imageUrl, isUpcoming = false, dataAiHint, place, time }: EventCardProps) {
   return (
     <Card className="overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <CardHeader className="p-0 relative">
@@ -33,9 +35,23 @@ export function EventCard({ title, slug, date, description, imageUrl, isUpcoming
       </CardHeader>
       <CardContent className="p-6 flex-grow">
         <CardTitle className="mb-2 text-xl text-gradient">{title}</CardTitle>
-        <div className="flex items-center text-sm text-muted-foreground mb-4">
-          <Calendar className="h-4 w-4 mr-2" />
-          <span>{date}</span>
+        <div className="flex flex-col space-y-2 text-sm text-muted-foreground mb-4">
+          <div className="flex items-center">
+            <Calendar className="h-4 w-4 mr-2" />
+            <span>{date}</span>
+          </div>
+          {time && (
+            <div className="flex items-center">
+              <Clock className="h-4 w-4 mr-2" />
+              <span>{time}</span>
+            </div>
+          )}
+          {place && (
+            <div className="flex items-center">
+              <MapPin className="h-4 w-4 mr-2" />
+              <span>{place}</span>
+            </div>
+          )}
         </div>
         <p className="text-sm text-foreground line-clamp-3">{description}</p>
       </CardContent>
